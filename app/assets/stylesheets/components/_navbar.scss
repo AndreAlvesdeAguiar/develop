@@ -1,0 +1,34 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #fff;
+  width: 100%;
+  z-index: 10;
+  min-height: 57px;
+
+  .logo-nav {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    width: 100px;
+    
+    span {
+      color: darken($principal, 15%);
+      transition: .3s;
+    }
+  }
+
+  &:hover{
+    span{
+      color: darken($principal, 0);
+    }
+  }
+
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 125px;
+}

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mapa-index ">
+      <div id="map" style="height: calc(50vh - 57px); width: 100% " data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 px-3">
+      <div class="row justify-content-between align-center">
+        <h1 class="text-center pt-3">Projects</h1>
+        <%= link_to 'New project', new_project_url, class: 'btn-principal btn-projeto mt-3' %>
+      </div>
+    </div>
+    <div class="col-12 form-mapa my-1 px-0">
+      <%= form_tag projects_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a project"
+        %>
+        <%= submit_tag "Search", class: "btn btn-principal" %>
+      <% end %>
+    </div>
+    <% @projects.each do |project| %>
+      <div class="col-lg-6 col-md-12">
+        <div class="card-projetos my-1">
+          <div class="card-body">
+            <p><%= project.title %></p>
+            <p><%= project.address %></p>
+            <p><%= project.description %></p>
+          </div>
+          <div class="card-footer">
+            <h2><%= link_to project.title, project %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

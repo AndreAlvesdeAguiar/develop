@@ -1,0 +1,59 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapa-index{
+  #map{
+    width: 100%;
+    height: 100vh;
+    position: sticky
+  }
+
+}
+
+
+@media(max-width:800px){
+  .mapa-index{
+    #map {
+      position: relative;
+      height: 50vh;
+    }
+  }
+}
+
+.form-mapa{
+  form{
+    display: flex;
+
+    .form-control{
+      padding: 1.5rem 20px;
+    }
+  }
+}
+
+@media(max-width:500px) {
+  .mapa-index{
+    #map {
+      position: relative;
+      height: 50vh;
+    }
+  }
+
+  .form-mapa {
+    form {
+      display: flex;
+  
+      .form-control {
+        padding: 1.5rem 20px;
+      }
+    }
+  }
+}
+
+
+

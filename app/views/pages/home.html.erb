@@ -1,0 +1,162 @@
+<section class="banner js-scroll">
+  <p>
+    <span id="banner-typed-text"></span>
+  </p>
+  <div class="row justify-content-center py-5">
+    <% unless user_signed_in? %>
+    <%= link_to "CADASTRE-SE", new_user_registration_path,  class: "btn-principal"  %>
+    <% else %>
+    <% if current_user.role == "Project Owner" %>
+    <%= link_to "GO TO DEVELOPERS", developers_path,  class: "btn-principal"  %>
+    <% else %>
+    <%= link_to "PROJECTS", projects_path,  class: "btn-principal"  %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+<section class="container-fluid section-valores js-scroll">
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <div class="infos">
+        <h2 class="mb-5">Easy-to-Access Developers In Your Region</h2>
+        <p>Hire nearby developers safely to develop incredible projects!</p>
+        <a href="btn btn-principal"></a>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 px-0">
+      <img src="https://picsum.photos/id/1/600/500" alt="Develuper" class="img-responsive">
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid section-depoimentos pt-5 js-scroll">
+  <div class="row justify-content-center">
+    <div class="col-7 text-center">
+      <h3>Depoimentos</h3>
+    </div>
+    <div class="col-10 px-0 py-4">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators mb-0">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("bruno.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Bruno Tostes</h5>
+                  <p>After I started hiring my devs for develuper I never had any communication problems or default!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("renato.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Renato Lima</h5>
+                  <p>What I liked most was the easy interaction with the customer! Fantastic!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("neto.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Neto Concon</h5>
+                  <p>There are two phases of my life, pre DevelUper, where time cost me a lot and post DevelUper where time started to reward me with productivity and security!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("andre.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Andre Aguiar</h5>
+                  <p>The platform really meets any and every need, I have already hired and made freelas that I got here, there was never a problem!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("roberto.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Roberto Barros</h5>
+                  <p>There are simply no failures! Just read carefully and look at the developers' portfolio!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-12">
+                <%= image_tag("matheus.jpg", :alt => "rss feed") %>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="carousel-caption d-md-block py-5">
+                  <h5>Matheus Moreira</h5>
+                  <p>Wonderful! Finding a Freela has never been easier!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <%# <span class="carousel-control-prev-icon" aria-hidden="true"></span> %>
+          <i class="fas fa-chevron-left"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <%# <span class="carousel-control-next-icon" aria-hidden="true"></span> %>
+          <i class="fas fa-chevron-right"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container-fluid p-5">
+  <div class="row justify-content-center">
+    <ul class="navbar nav-footer">
+      <li class="logo">Devel<span>Uper</span></li>
+    </ul>
+  </div>
+  <hr>
+  <div class="row justify-content-center">
+    <ul class="social-network">
+      <li>
+        <a href="https://github.com/RenatoLima0" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> </a>
+      </li>
+      <li>
+        <a href="https://github.com/AndreAlvesdeAguiar" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> </a>
+      </li>
+      <li>
+        <a href="https://github.com/mmferreira2000" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> </a>
+      </li>
+    </ul>
+  </div>
+</footer>
